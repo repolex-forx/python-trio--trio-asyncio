@@ -8,7 +8,7 @@
     {
       "@id": "https://repolex.ai/r/python-trio/trio-asyncio/commit/4b0074272edcf892893a955c01b49d664e29b309",
       "git:hexsha": "4b0074272edcf892893a955c01b49d664e29b309",
-      "repolex:parseStatus": "metadata_complete"
+      "repolex:parseStatus": "ast_complete"
     },
     {
       "@id": "https://repolex.ai/r/python-trio/trio-asyncio/commit/69d1ffafafd648cd9024480e3d7f0daadd53731c",
