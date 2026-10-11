@@ -1,1 +1,150 @@
-Initializing
+# Repolex Knowledge Graph of python-trio/trio-asyncio
+
+RDF knowledge graph data for [python-trio/trio-asyncio](https://github.com/python-trio/trio-asyncio), parsed by [repolex](https://repolex.ai).
+
+> **Note**: This data is experimental and subject to change without notice.
+
+## How to use this data
+
+The easiest way to get started is to install the [rlex](https://github.com/repolex-ai/rlex) query tool:
+
+```bash
+cargo install --git https://github.com/repolex-ai/rlex
+```
+
+Verify the install:
+
+```bash
+rlex --help
+```
+
+**rlex is designed to be used primarily by LLMs in a terminal.** Start up your favorite AI assistant and ask it to use rlex. It handles the SPARQL — you just ask questions in plain English.
+
+To load this repo's data:
+
+```bash
+rlex download python-trio/trio-asyncio
+```
+
+Consult `rlex --help` for other options, including SPARQL queries, HTTP server, and interactive visualization.
+
+## Data structure
+
+All data is stored as gzip-compressed [N-Quads](https://www.w3.org/TR/n-quads/) (`.nq.gz`), a standard RDF format that can be loaded into any triplestore or graph database.
+
+```
+.
+├── aggregate
+│   ├── ast
+│   │   └── 4b0074272edcf892893a955c01b49d664e29b309
+│   │       └── chunk-001.nq.gz
+│   └── repolex
+│       └── 4b0074272edcf892893a955c01b49d664e29b309
+│           └── chunk-001.nq.gz
+├── blob
+│   ├── 003bd6784ac08eb8723331ef8d97a277ba513903.nq.gz
+│   ├── 05552c5fd6e1c12f25b33daaf5d64684c24e6a7c.nq.gz
+│   ├── 0813c6430fcf06adc60579ea02fc6623bb529f7f.nq.gz
+│   ├── 1523179658d970ec0d9261f5cf5a101b94b1276a.nq.gz
+│   ├── 163aaf8d82b6c54f23c45f32895dbdfdcc27b047.nq.gz
+│   ├── 169a38a9ae75e8d134b61c2b0cc0c6983e325294.nq.gz
+│   ├── 19a7d0652e3b9beb6e3c7b67332ea2f9c9cc918a.nq.gz
+│   ├── 1b702cc20c284c763c6a30c4baaddb32b5f2cf31.nq.gz
+│   ├── 1cc685e49a293d923dad6f8ce99c6dfe389850f1.nq.gz
+│   ├── 1d2a44eeb46b3a6a9d09ac371b26d75eb1ce3ec8.nq.gz
+│   ├── 1d465a218cc5458de10e78021e7a18231f2656a9.nq.gz
+│   ├── 2216bd59248000c7c9dc23ccf98c1b6c448d8487.nq.gz
+│   ├── 24de2588a241097e7b11edcce93b7c562a08f98f.nq.gz
+│   ├── 25c3ba4743af91d90f136fbd0385703bc7da7666.nq.gz
+│   ├── 291bfeaa3b207e4173c50080f22cfb473363ee5a.nq.gz
+│   ├── 2b8305e06e27e4e9495983364e33002a5a8a7d6f.nq.gz
+│   ├── 2bc54d709a63908bf34ee78928ac5ab9cbf84868.nq.gz
+│   ├── 2deead41bc2a376c652ee5982a43f6c4cfdf1f41.nq.gz
+│   ├── 31e4b2780afe8094016f961431a033eea92f2c1a.nq.gz
+│   ├── 32be6fc7abee77d346f53c3d32a1b0645eeb1088.nq.gz
+│   ├── 3d6a167c46da4d3f3f9ea8da4ff493b8bf52040a.nq.gz
+│   ├── 3d949617cf9a27306045e5ce5c845d270f37247b.nq.gz
+│   ├── 40dcd0da0bb3f792cdff93cc93404fa89350bb8a.nq.gz
+│   ├── 4d1671b9eca459f43aeee8bc458b13d7b7cde219.nq.gz
+│   ├── 4f03dee95fad447652664fabeca184ab462a9fbe.nq.gz
+│   ├── 4f1bda7554a1e8884e790501746026f0de704b7a.nq.gz
+│   ├── 5288a825cafbc7c31746fac42f2d1f512b65fcb2.nq.gz
+│   ├── 54c989e934d98741531e2e4e7778005f25642a4a.nq.gz
+│   ├── 54e95d1f2415cb26770c0f64dc551f2d9262decd.nq.gz
+│   ├── 56de9b71fe10dcf7fc9ae8e60277b1983101bca9.nq.gz
+│   ├── 58edfc5fd92b02e2746ebd6d5c71e97355e11b5d.nq.gz
+│   ├── 610b873b37a24cefce156580e0c7c1d8c4b1c917.nq.gz
+│   ├── 6b12d5379516fc65e2f7d74635aefcbdee97746d.nq.gz
+│   ├── 6b4d90c83c470b5ffa11c20fc0718ecd48e03009.nq.gz
+│   ├── 6ff5c25c5a4b77ac9cce49f44778c1585d19133f.nq.gz
+│   ├── 7313f4edb530049492cc735eae374772935a9304.nq.gz
+│   ├── 749c5901ae2b1867624adc63df13d2117bb0231e.nq.gz
+│   ├── 77b000999d3ed0e9234e54d72fed4607e6782244.nq.gz
+│   ├── 7bdf5a838600c1716c0fdfa2ca3f38f1257a44b2.nq.gz
+│   ├── 87b31f721fb3508eb3963137be8506cf66e42b78.nq.gz
+│   ├── 8a1d9ec9ae97b5d71fc72d063559021f9b3e754e.nq.gz
+│   ├── 907995429cd80d3d3de595d4cd1969a577b91a12.nq.gz
+│   ├── 9f26a651872b244429aabcaa86851fba0559b77d.nq.gz
+│   ├── a1a37517b95fc81dfd3cf6c90f1dbf7aa97b77c1.nq.gz
+│   ├── ad7643a3841e1c247c2a0f306c6d1eaac8dbfcfa.nq.gz
+│   ├── b4e27e103d6ff8e1f1de7b76c66fdb1321ba8a38.nq.gz
+│   ├── b818c62d96224f515909ed1311520c2826d48744.nq.gz
+│   ├── b8bb97185926d7daed314609753173945ed4ff1a.nq.gz
+│   ├── ba194d620dd5ea7fe94242ebd22e139030f71c71.nq.gz
+│   ├── bdec0057a4af791302aafe6de2bb4d41169bb9a3.nq.gz
+│   ├── be83b0473171b64a9334bf96e39de255eff252a3.nq.gz
+│   ├── c5e6f0ed06f981582cb8fa839e632c97c09c1527.nq.gz
+│   ├── c65786570fda0463aefed3f079d32a3062b4bb48.nq.gz
+│   ├── c6b400b1d841476e011e72d1d2544c845d6d3f93.nq.gz
+│   ├── c90d971db1a370e23ed487140332ff2ff60381d8.nq.gz
+│   ├── c940299cbed2c678098ccf5582ca50ee304a1321.nq.gz
+│   ├── c9471946e1d2beeba8aa2df1db7ba361f3869101.nq.gz
+│   ├── cac350a71c92129ec8ed75ebe78ce119b652de33.nq.gz
+│   ├── d1927d25cb4485d46527d37b37d0727ab0211246.nq.gz
+│   ├── d45e4b909a76b4610ae7c06a74073cebc7be3c84.nq.gz
+│   ├── d645695673349e3947e8e5ae42332d0ac3164cd7.nq.gz
+│   ├── e090569876dd86e8e21813186e4eb8cb610770cd.nq.gz
+│   ├── e1e26dc87ff2fd701a2f12899e25026b0441c941.nq.gz
+│   ├── e69de29bb2d1d6434b8b29ae775ad8c2e48c5391.nq.gz
+│   ├── e8a9f09379921964c5178004e508f31a9de8875e.nq.gz
+│   ├── ec635144f60048986bc560c5576355344005e6e7.nq.gz
+│   ├── f100bdff807b138965c5d9e2ee40e37d67350ab3.nq.gz
+│   ├── f347e38b501ff675903fa0fc0cbe4f99934fec6a.nq.gz
+│   ├── f400d4b0f22de4533a3229fd4372a7562c762365.nq.gz
+│   ├── f52c12a0c628a04036226d97661fac33405f832e.nq.gz
+│   └── fd14228465d9d5c9a9b0d2a4d33fe7ae759e6c92.nq.gz
+├── branch
+│   └── branch.nq.gz
+├── commit
+│   └── commit.nq.gz
+├── filetree
+│   └── 4b0074272edcf892893a955c01b49d664e29b309.nq.gz
+├── issue
+│   └── issue.nq.gz
+├── pr
+│   └── pr.nq.gz
+└── tag
+    └── tag.nq.gz
+
+13 directories, 79 files
+```
+
+| Directory | What it contains |
+|-----------|-----------------|
+| `blob/` | Per-file AST graphs, content-addressed by git blob SHA. Each file in the source repo gets its own graph. |
+| `aggregate/ast/` | Combined AST graph per parsed commit. Merges all blob graphs for a snapshot of the entire codebase at that point. |
+| `aggregate/lsp/` | Language Server Protocol enrichment: resolved symbols, definitions, references, and type information. |
+| `aggregate/dataflow/` | Interprocedural data flow edges between functions and modules. |
+| `aggregate/repolex/` | Combined graph (AST + LSP + dataflow) per commit. |
+| `commit/` | Git commit metadata (author, date, message, parent links). |
+| `branch/` | Branch metadata. |
+| `tag/` | Tag metadata. |
+| `filetree/` | File tree snapshots per commit (which files existed and their blob SHAs). |
+| `audit/` | Code architecture and graph audit reports per commit. |
+
+## Source repository
+
+[python-trio/trio-asyncio](https://github.com/python-trio/trio-asyncio)
+
+---
+*Parsed on 2026-10-11 by [repolex](https://repolex.ai)*
